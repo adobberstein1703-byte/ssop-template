@@ -26,6 +26,33 @@
             position: relative;
         }
 
+        /* Watermark Logo */
+        .watermark {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 120px;
+            height: auto;
+            opacity: 0.85;
+            z-index: 100;
+            pointer-events: none;
+            filter: brightness(0) saturate(100%) invert(20%) sepia(80%) hue-rotate(250deg) saturate(1.5);
+        }
+
+        @media print {
+            .watermark {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .watermark {
+                width: 80px;
+                top: 10px;
+                left: 10px;
+            }
+        }
+
         /* AI Assistant Panel */
         .ai-assistant-panel {
             position: fixed;
@@ -748,13 +775,14 @@
             }
         }
     </style>
-}
     <!-- Load required libraries after the style -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <script src="https://unpkg.com/docx@8.5.0/build/index.umd.js"></script>
 </head>
 <body>
-}
+    <!-- Watermark Logo -->
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/0a/Ahlstrom_logo.png" alt="Ahlstrom Watermark" class="watermark">
+
     <div class="container">
         <!-- Header -->
         <div class="header">
