@@ -26,33 +26,6 @@
             position: relative;
         }
 
-        /* Watermark Logo */
-        .watermark {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            width: 120px;
-            height: auto;
-            opacity: 0.85;
-            z-index: 100;
-            pointer-events: none;
-            filter: brightness(0) saturate(100%) invert(20%) sepia(80%) hue-rotate(250deg) saturate(1.5);
-        }
-
-        @media print {
-            .watermark {
-                display: none;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .watermark {
-                width: 80px;
-                top: 10px;
-                left: 10px;
-            }
-        }
-
         /* AI Assistant Panel */
         .ai-assistant-panel {
             position: fixed;
@@ -193,9 +166,8 @@
         }
 
         .logo {
-            font-size: 28px;
-            font-weight: bold;
-            color: #5a2d82;
+            width: 120px;
+            height: auto;
         }
 
         .page-indicator {
@@ -780,13 +752,10 @@
     <script src="https://unpkg.com/docx@8.5.0/build/index.umd.js"></script>
 </head>
 <body>
-    <!-- Watermark Logo -->
-    <img src="https://upload.wikimedia.org/wikipedia/en/0/0a/Ahlstrom_logo.png" alt="Ahlstrom Watermark" class="watermark">
-
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <div class="logo">📋</div>
+            <img src="https://www.eventeny.com/users/pic/727357-cover-pdw967lwyb171710266201-1200.jpg" alt="Ahlstrom Logo" class="logo">
             <div class="page-indicator">Page 1 of 3</div>
         </div>
 
